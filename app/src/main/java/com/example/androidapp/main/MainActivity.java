@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void submit(View view) {
         // TODO: 2017/5/12 GsonRequest 泛型
-        requestQueue.add(new GsonRequest<>("http://169.254.176.254:8080/A", Person.class, new Response.Listener<Person>() {
+        requestQueue.add(new GsonRequest<>("http://192.168.3.117:8080/A", Person.class, new Response.Listener<Person>() {
             @Override
             public void onResponse(Person response) {
-                LogUtil.d(TAG, "name:" + response.name);
-                LogUtil.d(TAG, "age:" + response.age);
+                LogUtil.d("name:" + response.name);
+                LogUtil.d("age:" + response.age);
             }
         }, new Response.ErrorListener() {
             @Override
